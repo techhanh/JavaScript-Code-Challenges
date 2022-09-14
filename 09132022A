@@ -1,0 +1,31 @@
+/*
+Write a function that checks whether a person can watch an R-rated movie. One of the following two conditions is required for admittance: the person is at least 17 years old or they have parental supervision. The function accepts two parameters, age and isSupervised. Return a boolean that shows whether the person can enter the theater.
+
+Examples
+acceptIntoMovie(14, true) ➞ true
+acceptIntoMovie(14, false) ➞ false
+acceptIntoMovie(17, false) ➞ true
+*/
+
+/*
+write a function
+Inputs is age which is a number  and isSupervised which is a boolean 
+Output is a boolean that is true or false 
+uses an if else statement
+if age >= 17 or isSupervised true
+then admittance is true 
+if age < 17 or isSupervised false
+then admittance is false
+*/
+
+function admittance(age, isSupervised)
+  {
+    if (age >=17 || isSupervised === true)
+    {return true}
+   else if (age <17 || isSupervised === false)
+    {return false}
+}
+
+console.log(admittance(14, true)); //should be true
+console.log(admittance(14, false)); //should be false
+console.log(admittance(17, false)); //should be true
