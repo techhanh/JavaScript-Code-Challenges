@@ -1,0 +1,23 @@
+/* Code Challenge
+Leah's favorite numbers are numbers that are greater than 100. 
+Write a function that takes in a number and returns a boolean showing whether it is one of Leah's favorite numbers 
+(true if it is a favorite number, false if not).
+*/
+
+/* Pseudocode
+create a function and name it
+input is a number
+use if else statement to compare numbers
+if number is more than 100
+then return true
+else return false
+*/
+ 
+function leah(number) {
+ if (number > 100) {
+   return "true";
+ }
+   return "false";
+ }
+ 
+ console.log (leah(10));
