@@ -1,0 +1,25 @@
+/* Code Challenge
+Leah's favorite words are words that start with "L" and have 4 letters in them. 
+Write a function that takes in a string and returns a boolean showing whether it is one of Leah's favorite words 
+(true if it is a favorite word, false if not). 
+*/
+
+/*Pseudocode
+create a function and name it
+input is a string
+output is a boolean
+use if else statements to compare
+if word starts with the letter "l"
+and the length of the word is exactly 4
+then return true
+else return false
+*/
+
+function leahFavWord(word) {
+if (word[0] === "l" && word.length === 4) {
+return true;
+} else {
+return false;
+}
+}
+console.log(leahFavWord("love"));
