@@ -7,6 +7,7 @@ Write a function that takes in a number and returns a boolean showing whether it
 /* Pseudocode
 create a function and name it
 input is a number
+output is a boolean
 use if else statement to compare numbers
 if number is more than 100
 then return true
