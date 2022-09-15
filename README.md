@@ -4,4 +4,5 @@ Below are the files and what type of problems it contains:
 
 09132022A - if else statement, boolean
 09132022B - 3 parameters, uses multiplication and addition to get the result
-09132022A - if else statement, boolean, compares two numbers
+09132022A - if else statement, returns boolean, compares two numbers
+09132022B - if else statement, returns boolean, use && to find two values
