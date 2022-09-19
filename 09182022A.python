@@ -1,0 +1,36 @@
+/*Practice Problem
+Create a program that gives the correct response for all cases in the game of Rock, Paper, Scissors.
+*/
+
+/*Pseudocodes
+Rock vs Rock =	Tie
+Paper	vs Paper = Tie
+Scissors vs Scissors	= Tie
+Rock	vs Paper	= Player 2 wins
+Rock	vs Scissors	= Player 1 wins
+Paper	vs Rock	= Player 1 wins
+Paper	vs Scissors	= Player 2 wins
+Scissors	vs Rock	= Player 2 wins
+Scissors	vs Paper	= Player 1 wins
+
+
+player1 = "rock"
+player2 = "scissor"
+
+if player1 == player2: # use this to reduce lines of codes when first condition is equal to second condition
+    print("It's a tie")
+elif player1 == "rock":
+    if player2 =="paper":   # use nested loops to reduce lines of code
+        print("player2 wins")
+    elif player2 =="scissor": # use elif if there is a condition
+        print("player1 wins") # use else if there is no condition and it's the last statement
+elif player1 == "paper":
+    if player2 =="rock":
+        print("player1 wins")
+    elif player2 =="scissor":
+        print("player2 wins")
+elif player1 == "scissor":
+    if player2 =="rock":
+        print("player2 wins")
+    elif player2 =="paper":
+        print("player1 wins")
