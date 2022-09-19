@@ -1,43 +1,54 @@
 # problem 1
 my_string = "I love Seattle"
 my_string[7]
+# answer: S
 
 # problem 2
 my_string = "I love Seattle"
 my_string[2:4] (not including 4)
+# answer: lo
 
 # problem 3
 my_string = "Ada"
 my_string += " Lovelace"
+# answer: Ada Lovelace
 
 # problem 4
 my_string = "Ada"
 my_string += " codes" + " it!"
+# answer: Ada codes it!
 
 # problem 5
 my_string = "Ada"
 (my_string + " likes to code")[4:9] # omits the first 0-3 character of Ada and the space before likes, only includes character 4-9 on the string likes to code
+# answer: likes
 
 # problem 6
 my_string = "Hello world"
 "Goodbye " + my_string[6:11] + "!" # includes Goodbye and then only the 6th character up to the 11th character of my_string
+# answer: Goodbye world!
 
 # problem 7
 my_string = "Hello world!"
 my_string[0:5] + ", goodbye!" # inclues the first 5 characters of my_string only and then goodbye
+# answer: Hello, goodbye!
 
 # problem 8
 my_string = "Hello world!"
 my_string[:1] + "i" + "!" # replaces the 1st character with i and omits the rest. Then it adds in the ! at the end
+# answer: Hi!
 
 # problem 9
 my_string = "I love Python"
 my_string[7:13] + my_string[2:6] + my_string[0]
+# answer: PythonloveI
 
 # problem 10
 my_string = "I love Python"
 "P" + my_string[8:13] + " rocks!"
+# answer: python rocks!
 
 # problem 11
 my_string = "I love Python"
 my_string[2:6] + my_string[7:13] + my_string[2:6]
+# answer: lovePythonlove
