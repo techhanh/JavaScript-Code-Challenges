@@ -9,3 +9,4 @@ Below are the files and what type of problems it contains:
 09182022A.python - python code challenge, return winner a rock paper scissor game, nested if else statements
 09182022B.python - various practice challenges in string concatenation and interpolation, has answer keys
 09192022A.python - various practice challenges in loops in python, has answer keys
+09202022B.python - for loop, if statement, returns sum of even numbers
