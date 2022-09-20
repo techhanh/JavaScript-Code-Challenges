@@ -1,0 +1,54 @@
+# Practice Problem
+# Create three lists: 
+# A list that will contain student names ("ROSIE MARTINEZ"	"JOE LIU"	"SALLY SUE"	"BOB JOHNSON"	"DELIA AGHO"), A list that will contain student id numbers, and A list that will contain student email addresses.
+# Step 1. Make a list that contains five student names (first and last).
+# Step 2. Write a loop to generate random student ID numbers from 111111 to 999999 and store those values in the student ID number list.
+# Step 3. Write a loop to generate student email addresses in the format: (first initial)+(last name)+(last 3 digits of student ID number)@example.org and put these values in the student email list.
+# Step 4. Write the code which will print out all the student names, ID numbers, and email addresses in parallel lines.
+
+
+# Pseudocode:
+# create a variable name and a list of 5 students with their first and last names
+#
+# import random to use that module
+# create another list that is blank for the student id
+# use a for range loop to go through each of the student's name (for i in range) (there is 5 elements) 
+# # and generate a random id number from 111111 to 999999 using the random module and add it to the student id list using the apprend method
+# print to test your student id list
+#
+# create another empty list for the student's email address
+# use another for range loop to go through each of the 5 student names
+# create a new variable list and assign it to  split the first and last name that is following the space
+# combine using append and the new variable list to show the first letter of the first name, the full last name, the last 3 digits of the student id number (using a slice), and the "@example.org" string
+# (need to convert the student id number that was sliced to be a string so that it can combine together with the other strings)
+# print to test the student email list
+#
+# create a for range loop to go through each of the student's name, id number, and email address
+# print student name, id, and email so it is in each of it's own line in this format:
+# name: ROSIE MARTINEZ
+# id: 123256
+# email: RMARTINEZ256@example.org
+
+
+# Step 1:
+student_names = ["ROSIE MARTINEZ",	"JOE LIU",	"SALLY SUE",	"BOB JOHNSON",	"DELIA AGHO"]
+
+#Step 2: Write a loop to generate random student ID numbers from 111111 to 999999 and store those values in the student ID number list.
+import random
+student_id = []
+for i in range(5): #can also use a for string loop: for student in student_id
+    student_id.append(random.randint(111111, 999999))
+# print(f"{student_id}")
+
+#Step 3. Write a loop to generate student email addresses in the format: (first initial)+(last name)+(last 3 digits of student ID number)@example.org and put these values in the student email list.
+student_emails = []
+for i in range(5): #5 because the index will go 0 to 4 to include all the 5 names
+    [first, last] = student_names[i].split(" ") #split the name string into two starting at the space
+    student_emails.append(first[0] + last + str(student_id[i])[3:6] + "@example.org")
+# print(student_emails)
+
+#Step 4. Write the code which will print out all the student names, ID numbers, and email addresses in parallel lines.
+for i in range(5):
+    print(f"name: {student_names[i]}")
+    print(f"id: {student_id[i]}")
+    print(f"email: {student_emails[i]}\n")
