@@ -1,0 +1,25 @@
+# Create a function, which takes an argument num and returns the sum of all the even numbers from 0 to num, inclusive.
+
+# pseudocode solution A
+# define a function called total even numbers
+# parameter is num
+# docstring: input: integer (num), output: sum of all the even numbers
+# use afor range loop since it starts from 0 until num
+# start at 0, ends at num inclusive (num + 1), increments by 2
+# adds all the even numbers
+# return sum
+# test log
+
+def total_even_numbers(num):
+    """
+    input: integer (num+1)
+    output: sum of all the even numbers
+    """
+    sum = 0 # the initial sum is 0 as 0 + 0 = 0
+    for i in range (num + 1): # num + 1 to take in make it inclusive of the last number
+      if i % 2 == 0: # % 2 to increment by 2 to add to the total
+        sum += i
+    return sum
+
+total_even_numbers(4) # total of 4 + 2 + 0
+total_even_numbers(7) # total of 6 + 4 + 2 + 0, 7 is not included as it counts even nubmers only
