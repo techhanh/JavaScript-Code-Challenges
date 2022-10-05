@@ -1,0 +1,151 @@
+// QUESTION 1. Write a function that takes a String as a parameter and logs that parameter to the console (hint: use console.log).
+
+// EXAMPLE:
+// console.log("testing out my function for Q1: ", logString('hello'));
+//    should result in the next line appearing in your console...
+// hello
+
+function logString(name) {
+console.log(name);
+}
+logString("Answer 1: " + "Happy Birthday!"); //calling the function
+
+
+
+// QUESTION 2. Write a function definition that returns today's date in unix format (https://www.unixtimestamp.com/).
+
+// EXAMPLE:
+// console.log("testing out my function for Q2: ", today());
+//     should result in the next line appearing in your console...
+// 1622131798770  
+// NOTE: for this function, you will get a different number every millisecond you run the function, but it should be a 13 digit number.  Your lesson materials and the link above discuss Unix time in seconds, but you will need to account for the time all the way out to milliseconds for this question.
+
+function today() {
+ return Date.now(); //correct syntax?
+}
+console.log("Answer 2: " + today());
+
+
+
+// QUESTION 3. Write a function definition that takes 2 String parameters and returns a new string that concatenates both parameters.
+
+// EXAMPLE:
+// console.log("testing out my function for Q3: ", concat('foo', 'bar'));
+//     should result in the next line appearing in your console...
+// foobar
+
+function concat(string1, string2) {
+  return string1 + string2;
+}
+console.log("Answer 3: " + concat("foo", "Script"));
+
+
+
+// QUESTION 4. Write a function definition that takes a String parameter and returns that string with the first letter capitalized.
+
+// EXAMPLE:
+// console.log("testing out my function for Q4: ", capitalizeFirstLetter('bob malarky'));
+//     should result in the next line appearing in your console...
+// Bob malarky
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+} //the charAt and toUpperCase capitalizes the first character of the string, the slice method shows the rest of the string
+console.log("Answer 4: " + capitalizeFirstLetter ("phoenix"));
+
+
+
+// QUESTION 5. Write a function definition that takes 2 Number parameters and returns the modulus of parameter 1 by parameter 2. 
+
+// EXAMPLE:
+// console.log("testing out my function for Q5: ", mod(13, 4));
+//     should result in the next line appearing in your console...
+// 1
+
+function mod(param1, param2) {
+  return (param1 % param2);
+}
+console.log("Answer 5: " + mod(13, 4));
+
+
+
+// QUESTION 6. Write a function definition that takes 2 whole Number (integer) parameters and returns their average (hint: there is no built-in average operator in JavaScript).
+
+// EXAMPLE:
+// console.log("testing out my function for Q6: ", avg(1, 10));
+//     should result in the next line appearing in your console...
+// 5.5
+
+function avg(num1, num2) {
+  return ((num1 + num2)/2); //use math formula for this
+} //need to add another method to round the receive number to whole numbers??
+console.log("Answer 6: " + avg(1, 10));
+
+
+
+// QUESTION 7. Write a function definition that takes 2 Number parameters and returns the absolute difference between those numbers. For example, if the first parameter is smaller than the second, the first parameter will be subtracted from the second. If the first parameter is larger than the second, the second parameter will be subtracted from the first. If they are both equal, return the first parameter subtracted by the second.
+
+// EXAMPLES:
+// console.log("testing out my function for Q7: ", absoluteDifference(3, 5));
+//     should result in the next line appearing in your console...
+// 2
+//
+// OR if you pass a large then small number as arguments...
+// console.log("testing out my function for Q7: ", absoluteDifference(10, 1));
+// 9
+//
+// OR if you pass the same number as both arguments...
+// console.log("testing out my function for Q7: ", absoluteDifference(7,7));
+// 0
+
+function absoluteDifference(num1, num2) {
+
+  if (num1 < num2) {
+    finalNum = (num2 - num1); }
+  else if (num1 > num2) {
+    finalNum = (num1 -  num2);
+  } else if (num1 == num2) {
+    finalNum = (num1 - num2);
+  }
+  return finalNum;
+  
+  //another to solve this
+  // return (Math.abs(num1 - num2));
+} 
+console.log("Answer 7a: " + absoluteDifference (3,5));
+console.log("Answer 7b: " + absoluteDifference (10,1));
+console.log("Answer 7c: " + absoluteDifference (7,7));
+
+
+
+// QUESTION 8. Write a function definition that takes 2 String parameters and returns the length of the longest string. If they are of equal length, just return that length.
+
+// EXAMPLES:
+// console.log("testing out my function for Q8: ", longestStringLength('supercalafragalisticexpialadoshus', 'neat'));
+//     should result in the next line appearing in your console...
+// 33
+//
+// OR if the strings have the same length...
+// console.log("testing out my function for Q8: ", longestStringLength('hello', 'world'));
+// 5
+
+function longestStringLength(string1, string2) {
+  if (string1.length > string2.length) {
+    return string1.length;
+  } else if (string2.length > string1.length) {
+    return string2.length;
+  } else {return string1.length}
+}
+console.log("Answer 8a: " + longestStringLength("supercalafragalisticexpialadoshus", "neat"));
+console.log("Answer 8b: " + longestStringLength("hello", "world"));
+
+
+
+// DO NOT EDIT BELOW THIS LINE
+
+module.exports = {
+  logString, today, concat, capitalizeFirstLetter, mod, avg, absoluteDifference, longestStringLength
+}
+
+
+
